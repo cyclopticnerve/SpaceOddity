@@ -10,62 +10,39 @@
    ├─ [] docs/
    │     ├─ [] API/
    │     │     └─ [] src/
-<<<<<<< HEAD
-=======
-   │     │           ├─ [] cron/
-   │     │           │     ├─ [] pre_uninstall.md
-   │     │           │     └─ [] stuff.md
->>>>>>> 594614e3 (first commit)
    │     │           ├─ [] spaceoddity_base.md
    │     │           └─ [] spaceoddity.md
    │     ├─ [] images/
    │     │     └─ [] spaceoddity.png
    │     ├─ [] img/
-   │     │     └─ [] favicon.ico
    │     └─ [] index.md
    ├─ [] i18n/
    │     ├─ [] locale/
-<<<<<<< HEAD
-   │     │     └─ [] en/
-   │     │           └─ [] LC_MESSAGES/
-   │     │                 └─ [] ABOUT
-   │     ├─ [] po/
-   │     │     ├─ [] en/
-   │     │     │     └─ [] spaceoddity.po
-=======
    │     │     ├─ [] SpaceOddity/
    │     │     │     └─ [] LC_MESSAGES/
    │     │     │           └─ [] ABOUT
    │     │     ├─ [] en/
    │     │     │     └─ [] LC_MESSAGES/
-   │     │     │           └─ [] ABOUT
+   │     │     │           └─ [] spaceoddity.mo
    │     │     └─ [] es/
    │     │           └─ [] LC_MESSAGES/
-   │     │                 └─ [] ABOUT
+   │     │                 └─ [] spaceoddity.mo
    │     ├─ [] po/
-   │     │     ├─ [] SpaceOddity/
-   │     │     │     └─ [] spaceoddity.po
    │     │     ├─ [] en/
    │     │     │     └─ [] spaceoddity.po
    │     │     ├─ [] es/
    │     │     │     └─ [] spaceoddity.po
->>>>>>> 594614e3 (first commit)
    │     │     └─ [] LINGUAS
    │     └─ [] pot/
    │           └─ [] spaceoddity.pot
    ├─ [] images/
    │     └─ [] spaceoddity.png
    ├─ [] install/
-<<<<<<< HEAD
-   │     ├─ [] install.json
-   │     ├─ [] install.py
-   │     ├─ [] uninstall.json
-=======
    │     ├─ [] install_base.py
    │     ├─ [] install.json
    │     ├─ [] install.py
    │     ├─ [] post_install.py
->>>>>>> 594614e3 (first commit)
+   │     ├─ [] uninstall.json
    │     └─ [] uninstall.py
    ├─ [] log/
    │     └─ [] spaceoddity.log
@@ -87,33 +64,16 @@
    │     │     └─ [] private.json
    │     └─ [] project.json
    ├─ [] src/
-<<<<<<< HEAD
-   │     ├─ [] spaceoddity_base.py
-   │     └─ [] spaceoddity.py
-   ├─ [] tests/
-   │     └─ [] ABOUT
-   ├─ [] todo/
-   │     └─ [] ABOUT
-=======
-   │     ├─ [] cron/
-   │     │     ├─ [] pre_uninstall.py
-   │     │     └─ [] stuff.py
    │     ├─ [] spaceoddity_base.py
    │     └─ [] spaceoddity.py
    ├─ [] tests/
    │     └─ [] test.py
    ├─ [] todo/
    │     └─ [] todo.txt
->>>>>>> 594614e3 (first commit)
    ├─ [] .gitignore
    ├─ [] LICENSE.txt
    ├─ [] README.md
    ├─ [] develop.py
    ├─ [] mkdocs.yml
    ├─ [] pyproject.toml
-<<<<<<< HEAD
    └─ [] requirements.txt
-=======
-   ├─ [] requirements.txt
-   └─ [] spaceoddity.po
->>>>>>> 594614e3 (first commit)

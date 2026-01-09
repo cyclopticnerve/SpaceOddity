@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: cyclopticnerve@gmail.com\n"
-"POT-Creation-Date: 2025-12-29 16:31-0500\n"
+"POT-Creation-Date: 2026-01-09 13:17-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,3 +16,311 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#. I18N: done with step
+#. I18N: success
+#. I18N: done with step
+#. I18N: Done with cron job
+#. I18N: done with step
+#: develop.py:79
+#: install/install.py:233
+#: install/install_base.py:168
+#: install/post_install.py:76
+#: src/spaceoddity.py:153
+msgid "Done"
+msgstr ""
+
+#. I18N: step failed
+#. I18N: fail
+#. I18N: step failed
+#: develop.py:81
+#: install/install.py:235
+#: install/install_base.py:170
+#: install/post_install.py:78
+msgid "Failed"
+msgstr ""
+
+#. I18N: show the venv step
+#: develop.py:83
+#: install/install.py:241
+msgid "Making venv folder... "
+msgstr ""
+
+#. I18N: show the reqs step
+#: develop.py:85
+#: install/install.py:243
+msgid "Installing requirements... "
+msgstr ""
+
+#. I18N: an error occurred
+#: develop.py:90
+#: install/install.py:217
+msgid "Error: "
+msgstr ""
+
+#. I18N help string for debug cmd line option
+#. I18N: dry mode help
+#: install/install.py:190
+#: install/install_base.py:122
+msgid "enable dry run mode"
+msgstr ""
+
+#. I18N: help option help
+#: install/install.py:197
+#: install/install_base.py:143
+#: src/spaceoddity_base.py:207
+msgid "show this help message and exit"
+msgstr ""
+
+#. I18N if using argparse, add help at end of about
+#: install/install.py:209
+#: install/install_base.py:155
+msgid "Use -h for help"
+msgstr ""
+
+#. I18N: install the program
+#: install/install.py:227
+msgid "Installing {} Version {}"
+msgstr ""
+
+#. I18N: done installing
+#: install/install.py:231
+#: install/install.py:257
+msgid "{} installed"
+msgstr ""
+
+#. I18N: show the copy step
+#: install/install.py:239
+msgid "Copying files... "
+msgstr ""
+
+#. I18N: show desktop step
+#: install/install.py:245
+msgid "Fixing .desktop file... "
+msgstr ""
+
+#. I18N: install aborted
+#: install/install.py:248
+msgid "Installation aborted"
+msgstr ""
+
+#. I18N: answer yes
+#: install/install.py:252
+#: install/install_base.py:181
+#: src/spaceoddity_base.py:259
+msgid "y"
+msgstr ""
+
+#. I18N: answer no
+#: install/install.py:254
+msgid "n"
+msgstr ""
+
+#: install/install.py:263
+msgid ""
+"The current version of this program is already installed.\n"
+"Do you want to overwrite?"
+msgstr ""
+
+#: install/install.py:268
+msgid ""
+"A newer version of this program is currently installed.\n"
+"Do you want to overwrite?"
+msgstr ""
+
+#. I18N: an error occurred
+#: install/install.py:275
+#: install/install_base.py:189
+#: src/spaceoddity_base.py:250
+#: src/spaceoddity_base.py:276
+msgid "Error:"
+msgstr ""
+
+#. I18N: config file not found
+#: install/install.py:278
+#: install/install_base.py:192
+msgid "File {} not found"
+msgstr ""
+
+#. I18N: config file is not valid json
+#: install/install.py:281
+#: install/install_base.py:195
+msgid "File {} is not a JSON file"
+msgstr ""
+
+#. I18N: version numbers invalid
+#: install/install.py:285
+msgid "One or both version numbers are invalid"
+msgstr ""
+
+#. I18N: src path invalid
+#: install/install.py:288
+msgid "Source path can not be {}"
+msgstr ""
+
+#. I18N: dst path invalid
+#: install/install.py:291
+msgid "Destination path can not be {}"
+msgstr ""
+
+#. I18N: can't find .desktop
+#: install/install.py:293
+msgid "No desktop files present"
+msgstr ""
+
+#. I18N: force option help
+#: install/install_base.py:129
+msgid "force install this program"
+msgstr ""
+
+#. I18N: quiet option help
+#: install/install_base.py:136
+msgid "do not print about message"
+msgstr ""
+
+#. I18N: process aborted
+#: install/install_base.py:172
+#: src/spaceoddity_base.py:270
+msgid "Aborted"
+msgstr ""
+
+#. I18N: install cron job
+#. I18N: run external script
+#: install/install_base.py:175
+#: install/post_install.py:74
+msgid "Running {}... "
+msgstr ""
+
+#. I18N: answer no
+#: install/install_base.py:183
+#: src/spaceoddity_base.py:261
+msgid "N"
+msgstr ""
+
+#. I18N: enable mode help
+#: src/spaceoddity.py:138
+msgid "enable the program"
+msgstr ""
+
+#. I18N: disable mode help
+#: src/spaceoddity.py:144
+msgid "disable the program"
+msgstr ""
+
+#. I18N: install cron job
+#: src/spaceoddity.py:149
+msgid "Adding cron job... "
+msgstr ""
+
+#. I18N: Uninstall cron job
+#: src/spaceoddity.py:151
+msgid "Removing cron job... "
+msgstr ""
+
+#. I18N: get initial apod dict
+#. NB: param is dict
+#: src/spaceoddity.py:156
+msgid "Get data from server"
+msgstr ""
+
+#. I18N: no change, exit
+#: src/spaceoddity.py:158
+msgid "The APOD picture has not changed"
+msgstr ""
+
+#. I18N: new download is not image
+#: src/spaceoddity.py:160
+msgid "The new APOD is not an image"
+msgstr ""
+
+#. I18N: download succeeded
+#: src/spaceoddity.py:162
+msgid "Downloaded image"
+msgstr ""
+
+#. I18N: set image as background
+#: src/spaceoddity.py:164
+msgid "Set image as background"
+msgstr ""
+
+#. I18N: delete old image
+#: src/spaceoddity.py:166
+msgid "Deleted old image"
+msgstr ""
+
+#. I18N: error on initial get
+#. NB: param is error msg
+#: src/spaceoddity.py:171
+msgid "Could not get data from server: {}"
+msgstr ""
+
+#. I18N: could not download new image
+#. NB: param is error
+#: src/spaceoddity.py:174
+msgid "Could not download image: {}"
+msgstr ""
+
+#. I18N: could not set new image
+#. NB: param is error
+#: src/spaceoddity.py:177
+msgid "Could not set new image: {}"
+msgstr ""
+
+#. I18N: could not delete old image
+#. NB: param is error
+#: src/spaceoddity.py:180
+msgid "Could not delete old image: {}"
+msgstr ""
+
+#. I18N: context for this string
+#: src/spaceoddity.py:353
+msgid "this is func (DEBUG)"
+msgstr ""
+
+#. I18N: context for this string
+#: src/spaceoddity.py:357
+msgid "this is func"
+msgstr ""
+
+#. I18N: config file option help
+#: src/spaceoddity_base.py:191
+msgid "load configuration from file"
+msgstr ""
+
+#. I18N: config file dest
+#: src/spaceoddity_base.py:193
+msgid "FILE"
+msgstr ""
+
+#. I18N: debug mode help
+#: src/spaceoddity_base.py:200
+msgid "enable debugging mode"
+msgstr ""
+
+#. I18N: install option help
+#: src/spaceoddity_base.py:215
+msgid "install this program"
+msgstr ""
+
+#. I18N: uninstall option help
+#: src/spaceoddity_base.py:224
+msgid "uninstall this program"
+msgstr ""
+
+#. I18N: uninstall not found
+#: src/spaceoddity_base.py:253
+#: src/spaceoddity_base.py:278
+msgid "Uninstall files not found"
+msgstr ""
+
+#. I18N: ask to uninstall
+#: src/spaceoddity_base.py:264
+msgid ""
+"This will uninstall {}.\n"
+"Do you want to continue?"
+msgstr ""
+
+#. I18N: could not find -c file
+#: src/spaceoddity_base.py:282
+msgid "Config file {} not found"
+msgstr ""

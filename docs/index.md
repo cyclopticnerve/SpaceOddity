@@ -17,7 +17,7 @@ Short description
 <!-- __RM_SHORT_DESC__ -->
 
 <!-- __RM_VERSION__ -->
-Version 0.0.0
+Version 0.0.1
 <!-- __RM_VERSION__ -->
 
 <!-- __RM_SCREENSHOT__ -->
@@ -67,12 +67,13 @@ $ cd ~/Downloads/SpaceOddity/install
 ```
 
 Either way, run the install script:
+```bash
 $ ./install.py
 ```
 <!-- __RM_APP__ -->
 
 ## Usage
-Read the [documentation](https://cyclopticnerve.github.io/SpaceOddity).
+Read the full [documentation](https://cyclopticnerve.github.io/SpaceOddity).
 
 ## Uninstalling
 

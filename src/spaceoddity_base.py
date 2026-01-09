@@ -87,8 +87,8 @@ P_UNINST_DIST = P_DIR_PRJ / "uninstall.py"
 # Globals
 # ------------------------------------------------------------------------------
 
-DIR_LOCALE = P_DIR_PRJ / "__PP_PATH_LOCALE__"
-_ = F.get_underscore("__PP_NAME_PRJ_SMALL__", DIR_LOCALE)
+DIR_LOCALE = P_DIR_PRJ / "i18n/locale"
+_ = F.get_underscore("spaceoddity", DIR_LOCALE)
 
 # # ------------------------------------------------------------------------------
 # # gettext stuff for CLI and GUI
@@ -181,7 +181,7 @@ class SpaceoddityBase:
 <<<<<<< HEAD
     S_PP_VERSION = "Version 0.0.1"
 =======
-    S_PP_VERSION = "Version 0.0.0"
+    S_PP_VERSION = "Version 0.0.1"
 >>>>>>> 594614e3 (first commit)
 
     # config option strings
