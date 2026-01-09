@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Project",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "src/spaceoddity.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Prj Args",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "src/spaceoddity.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args": "${command:pickArgs}"
+        }
+    ]
+}

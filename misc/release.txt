@@ -1,0 +1,12 @@
+1. Run PB on project
+    1a. Change DOCS_USE_RM to true
+    1b. Run PB
+    1c. Change version
+
+2. Commit/Push
+    2a. Commit & Push
+    2b. Use GitGraph to tag local/remote
+
+3. Github
+    3a. Create release
+    3b. Add dist to release

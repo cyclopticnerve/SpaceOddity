@@ -1,0 +1,17 @@
+# ------------------------------------------------------------------------------
+# Project : SpaceOddity                                            /          \
+# Filename: mkdocs.yml                                            |     ()     |
+# Date    : 12/29/2025                                            |            |
+# Author  : cyclopticnerve                                        |   \____/   |
+# License : WTFPLv2                                                \          /
+# ------------------------------------------------------------------------------
+
+site_name: SpaceOddity
+theme: 
+docs_dir: docs
+site_dir: site
+plugins:
+    - search
+    - mkdocstrings
+
+# -)

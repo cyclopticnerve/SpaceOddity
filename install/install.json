@@ -1,0 +1,19 @@
+{
+    "INST_NAME": "SpaceOddity",
+    "INST_VER": "0.0.1",
+    "INST_DESK": false,
+    "INST_CONT": {
+        "bin/spaceoddity": ".local/bin",
+        "conf": ".local/share/spaceoddity",
+        "log": ".local/share/spaceoddity",
+        "i18n": ".local/share/spaceoddity",
+        "images": ".local/share/spaceoddity",
+        "install": ".local/share/spaceoddity",
+        "src": ".local/share/spaceoddity",
+        "uninstall.py": ".local/share/spaceoddity"
+    },
+    "UNINST_CONT": [
+        ".local/bin/spaceoddity",
+        ".local/share/spaceoddity"
+    ]
+}

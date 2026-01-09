@@ -1,0 +1,5 @@
+
+TEST: enable/disable does cron
+TEST: even if url same, change anyway
+
+TODO: run at wake/every 10 min

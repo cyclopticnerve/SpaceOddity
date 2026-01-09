@@ -1,0 +1,8 @@
+{
+    "INST_NAME": "SpaceOddity",
+    "INST_VER": "0.0.1",
+    "INST_CONT": [
+        ".local/bin/spaceoddity",
+        ".local/share/spaceoddity"
+    ]
+}

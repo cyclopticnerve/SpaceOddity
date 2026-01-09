@@ -1,0 +1,120 @@
+{
+    "PUB_BL": {
+        "SKIP_ALL": [
+            ".git",
+            ".venv*",
+            ".VSCodeCounter",
+            "*.code-workspace",
+            "dist",
+            "docs",
+            "i18n",
+            "misc",
+            "site",
+            "todo",
+            "LICENSE.txt",
+            "requirements.txt",
+            "**/__pycache__",
+            "**/*.egg-info",
+            "pyplate"
+        ],
+        "SKIP_CONTENTS": [
+            "**/*.png",
+            "**/*.jpg",
+            "**/*.jpeg",
+            "**/*.ico"
+        ],
+        "SKIP_HEADER": [],
+        "SKIP_CODE": [
+            "conf"
+        ],
+        "SKIP_TREE": [
+            ".git",
+            ".venv*",
+            ".VSCodeCounter",
+            "dist",
+            "site",
+            "**/__pycache__",
+            "**/*.egg-info"
+        ]
+    },
+    "PUB_DBG": {
+        "DBG_GIT": true,
+        "DBG_VENV": true,
+        "DBG_I18N": true,
+        "DBG_DOCS": true,
+        "DBG_INST": true,
+        "DBG_TREE": true,
+        "DBG_DIST": false
+    },
+    "PUB_DIST": {
+        "bin": "assets",
+        "conf": "assets",
+        "log": "assets",
+        "i18n": "assets",
+        "images": "assets",
+        "install": "assets",
+        "src": "assets",
+        "requirements.txt": "assets/install"
+    },
+    "PUB_DOCS": {
+        "DOCS_THEME": "",
+        "DOCS_USE_RM": true,
+        "DOCS_MAKE_API": true,
+        "DOCS_DIR_API": [
+            "src"
+        ]
+    },
+    "PUB_I18N": {
+        "DOMAIN": "spaceoddity",
+        "SOURCES": [
+            "bin",
+            "install",
+            "src",
+            "develop.py"
+        ],
+        "CLANGS": {
+            "Python": [
+                ".py"
+            ],
+            "Glade": [
+                ".ui",
+                ".glade"
+            ],
+            "Desktop": [
+                ".desktop"
+            ]
+        },
+        "WLANGS": [
+            "en"
+        ],
+        "CHARSET": "UTF-8"
+    },
+    "PUB_META": {
+        "META_SHORT_DESC": "Short description",
+        "META_VERSION": "0.0.1",
+        "META_KEYWORDS": [],
+        "META_DEPS": {
+            "Python 3.10+": "https://python.org"
+        },
+        "META_CATS": []
+    },
+    "PUB_INST": {
+        "INST_NAME": "SpaceOddity",
+        "INST_VER": "0.0.1",
+        "INST_DESK": false,
+        "INST_CONT": {
+            "bin/spaceoddity": ".local/bin",
+            "conf": ".local/share/spaceoddity",
+            "log": ".local/share/spaceoddity",
+            "i18n": ".local/share/spaceoddity",
+            "images": ".local/share/spaceoddity",
+            "install": ".local/share/spaceoddity",
+            "src": ".local/share/spaceoddity",
+            "uninstall.py": ".local/share/spaceoddity"
+        },
+        "UNINST_CONT": [
+            ".local/bin/spaceoddity",
+            ".local/share/spaceoddity"
+        ]
+    }
+}
