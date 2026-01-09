@@ -15,6 +15,7 @@
    │     ├─ [] images/
    │     │     └─ [] spaceoddity.png
    │     ├─ [] img/
+   │     │     └─ [] ABOUT
    │     └─ [] index.md
    ├─ [] i18n/
    │     ├─ [] locale/
