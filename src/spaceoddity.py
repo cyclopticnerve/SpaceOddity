@@ -43,7 +43,7 @@ Typical usage is show in the main() method.
 # system imports
 from datetime import datetime
 import json
-# import os
+import os
 from pathlib import Path
 import sys
 from urllib import request
@@ -51,6 +51,7 @@ from urllib import request
 # third party imports
 # from crontab import CronTab
 import cnlib.cnfunctions as F
+from crontab import CronTab
 import spaceoddity_base as B
 from spaceoddity_base import _
 from spaceoddity_base import SpaceoddityBase
@@ -115,8 +116,7 @@ class Spaceoddity(SpaceoddityBase):
 
     # the url to load json from
     S_APOD_URL = (
-        "https://api.nasa.gov/planetary/apod?api_key="
-        "2h4peiV1XvWqA0bHBxVK21D3QmyBgHtwIyRxo8dm"
+        "https://api.nasa.gov/planetary/apod?api_key=K0sNPQo8Dn9f8kaO35hzs8kUnU9bHwhTtazybTbr"
     )
 
     # acceptable types
@@ -253,8 +253,6 @@ class Spaceoddity(SpaceoddityBase):
         # main stuff
 
         # do the thing with the thing
-        print(self._func())
-
         res = self._get_apod_dict()
 
         self._new_file = self._dict_cfg.get(self.S_KEY_FILE_OLD, "")
@@ -265,7 +263,6 @@ class Spaceoddity(SpaceoddityBase):
 
         if res:
             self._delete_old_image()
->>>>>>> 594614e3 (first commit)
 
         # ----------------------------------------------------------------------
         # teardown
@@ -279,102 +276,6 @@ class Spaceoddity(SpaceoddityBase):
 
     # NB: these are the main steps, called in order from main
 
-<<<<<<< HEAD
-    # # --------------------------------------------------------------------------
-    # # Boilerplate to use at the start of main
-    # # --------------------------------------------------------------------------
-    # def _setup(self):
-    #     """
-    #     Boilerplate to use at the start of main
-
-    #     Perform some mundane stuff like setting properties.
-    #     If you implement this function. make sure to call super() LAST!!!
-    #     """
-
-    #     # add cfg option
-    #     self._parser.add_argument(
-    #         self.S_ARG_CFG_OPTION,
-    #         dest=self.S_ARG_CFG_DEST,
-    #         help=self.S_ARG_CFG_HELP,
-    #         metavar=self.S_ARG_CFG_METAVAR,
-    #     )
-
-    #     # add debug option
-    #     self._parser.add_argument(
-    #         self.S_ARG_DBG_OPTION,
-    #         action=self.S_ARG_DBG_ACTION,
-    #         dest=self.S_ARG_DBG_DEST,
-    #         help=self.S_ARG_DBG_HELP,
-    #     )
-
-    #     # add install option
-    #     self._parser.add_argument(
-    #         self.S_ARG_INST_OPTION,
-    #         action=self.S_ARG_INST_ACTION,
-    #         dest=self.S_ARG_INST_DEST,
-    #         help=self.S_ARG_INST_HELP,
-    #     )
-
-    #     # add uninstall option
-    #     self._parser.add_argument(
-    #         self.S_ARG_UNINST_OPTION,
-    #         action=self.S_ARG_UNINST_ACTION,
-    #         dest=self.S_ARG_UNINST_DEST,
-    #         help=self.S_ARG_UNINST_HELP,
-    #     )
-
-    #     # do setup
-    #     super()._setup()
-
-    # --------------------------------------------------------------------------
-    # Short description
-    # --------------------------------------------------------------------------
-    def _func(self):
-        """
-        Short description
-
-        Args:
-            var_name: Short description
-
-        Returns:
-            Description
-
-        Raises:
-            exception_type(vars): Description
-
-        Long description (including HTML).
-        """
-
-        self._logger.info("_func")
-
-        # check for debug flag
-        if self._cmd_debug:
-            # I18N: context for this string
-            return _("this is func (DEBUG)")
-
-        # no debug, return normal result
-        # I18N: context for this string
-        return _("this is func")
-
-    # # --------------------------------------------------------------------------
-    # # Boilerplate to use at the end of main
-    # # --------------------------------------------------------------------------
-    # def _teardown(self):
-    #     """
-    #     Boilerplate to use at the end of main
-
-    #     Perform some mundane stuff like saving properties.
-    #     If you implement this function. make sure to call super() LAST!!!
-    #     """
-
-    #     print("sub ", .f_code.co_name)
-
-    #     # save a prop
-    #     self._dict_cfg["foo"] = "bar"
-
-    #     # do teardown
-    #     super()._teardown()
-=======
     # --------------------------------------------------------------------------
     # Boilerplate to use at the start of main
     # --------------------------------------------------------------------------
@@ -421,44 +322,44 @@ class Spaceoddity(SpaceoddityBase):
             print("_enable")
             return
 
-        # # show some text
-        # print(self.S_MSG_CRON_ADD, end="", flush=True)
+        # show some text
+        print(self.S_MSG_CRON_ADD, end="", flush=True)
 
-        # # ----------------------------------------------------------------------
-        # # get cron command
+        # ----------------------------------------------------------------------
+        # get cron command
 
-        # # set the job command
-        # uid = os.getuid()
-        # cron_cmd = self.S_CMD_CRON.format(uid, self.S_PRG_NAME)
+        # set the job command
+        uid = os.getuid()
+        cron_cmd = self.S_CMD_CRON.format(uid, self.S_PRG_NAME)
 
-        # --------------------------------------------------------------------------
+        # ----------------------------------------------------------------------
         # create cron object
 
-        # # get current user's crontab
-        # my_cron = CronTab(user=True)
+        # get current user's crontab
+        my_cron = CronTab(user=True)
 
-        # # find 'every' job
-        # my_job = None
-        # for job in my_cron:
+        # find 'every' job
+        my_job = None
+        for job in my_cron:
 
-        #     # find our job
-        #     if job.comment == self.S_PRG_NAME:
-        #         my_job = job
-        #         break
+            # find our job
+            if job.comment == self.S_PRG_NAME:
+                my_job = job
+                break
 
-        # # create new job if necessary
-        # if not my_job:
-        #     my_job = my_cron.new(command=cron_cmd, comment=self.S_PRG_NAME)
+        # create new job if necessary
+        if not my_job:
+            my_job = my_cron.new(command=cron_cmd, comment=self.S_PRG_NAME)
 
-        # # set job time
-        # my_job.enable()
-        # my_job.minute.every(10)
+        # set job time
+        my_job.enable()
+        my_job.minute.every(10) # type: ignore
 
-        # # save job parameters
-        # my_cron.write()
+        # save job parameters
+        my_cron.write()
 
         # show some text
-        # print(self.S_MSG_DONE, end="", flush=True)
+        print(self.S_MSG_DONE, end="", flush=True)
 
     # --------------------------------------------------------------------------
     # Disable cron job
@@ -474,18 +375,21 @@ class Spaceoddity(SpaceoddityBase):
             return
 
         # show some text
-        # print(self.S_MSG_CRON_DEL, end="", flush=True)
+        print(self.S_MSG_CRON_DEL, end="", flush=True)
 
-        # # get current user's crontab
-        # my_cron = CronTab(user=True)
+        # get current user's crontab
+        my_cron = CronTab(user=True)
 
-        # # remove 'every' job
-        # for job in my_cron:
-        #     if job.comment == self.S_PRG_NAME:
-        #         my_cron.remove(job)
+        # remove 'every' job
+        for job in my_cron:
+            if job.comment == self.S_PRG_NAME:
+                my_cron.remove(job)
 
-        # # save job parameters
-        # my_cron.write()
+        # save job parameters
+        my_cron.write()
+
+        # show some text
+        print(self.S_MSG_DONE, end="", flush=True)
 
     # --------------------------------------------------------------------------
     # Get json from api.nasa.gov
@@ -555,9 +459,9 @@ class Spaceoddity(SpaceoddityBase):
 
         # get most appropriate URL
         src_url = ""
-        if self.S_KEY_APOD_HDURL in apod_dict.keys():
+        if self.S_KEY_APOD_HDURL in apod_dict:
             src_url = apod_dict[self.S_KEY_APOD_HDURL]
-        elif self.S_KEY_APOD_URL in apod_dict.keys():
+        elif self.S_KEY_APOD_URL in apod_dict:
             src_url = apod_dict[self.S_KEY_APOD_URL]
 
         # create a download path
@@ -673,7 +577,6 @@ class Spaceoddity(SpaceoddityBase):
 
         # return the result
         return same_url
->>>>>>> 594614e3 (first commit)
 
 
 # ------------------------------------------------------------------------------
@@ -689,11 +592,7 @@ if __name__ == "__main__":
     # create a new instance of the main class
     obj = Spaceoddity()
 
-<<<<<<< HEAD
-    # run the new object
-=======
     # run the instance
->>>>>>> 594614e3 (first commit)
     obj.main()
 
 # -)

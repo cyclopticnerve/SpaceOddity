@@ -2,4 +2,5 @@
 TEST: enable/disable does cron
 TEST: even if url same, change anyway
 
-TODO: run at wake/every 10 min
+TODO: run at wake
+TODO: use pillow for caption
