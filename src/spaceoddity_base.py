@@ -22,20 +22,13 @@ directory).
 
 # system imports
 import argparse
-# import gettext
-# import locale
 import logging
 from pathlib import Path
-# import gettext
-# import locale
-# import logging
-# from pathlib import Path
-# import subprocess
 import sys
 
 # cnlib imports
-from cnlib import cnfunctions as F  # type: ignore
-from cnlib.cnformatter import CNFormatter  # type: ignore
+from cnlib import cnfunctions as F
+from cnlib.cnformatter import CNFormatter
 
 # ------------------------------------------------------------------------------
 # Constants
@@ -66,25 +59,6 @@ P_UNINST_DIST = P_DIR_PRJ / "uninstall.py"
 
 DIR_LOCALE = P_DIR_PRJ / "i18n/locale"
 _ = F.get_underscore("spaceoddity", DIR_LOCALE)
-
-# # ------------------------------------------------------------------------------
-# # gettext stuff for CLI and GUI
-# # NB: keep global
-# # to test translations, run as foo@bar:$ LANGUAGE=xx ./__PP_NAME_PRJ_SMALL__.py
-
-# # path to project dir
-# T_DIR_PRJ = P_DIR_PRJ
-
-# # init gettext
-# T_DOMAIN = "spaceoddity"
-# T_DIR_LOCALE = T_DIR_PRJ / "i18n/locale"
-# T_TRANSLATION = gettext.translation(T_DOMAIN, T_DIR_LOCALE, fallback=True)
-# _ = T_TRANSLATION.gettext
-
-# # fix locale (different than gettext stuff, mostly fixes GUI issues, but ok to
-# # use for CLI in the interest of common code)
-# locale.bindtextdomain(T_DOMAIN, T_DIR_LOCALE)
-
 
 # ------------------------------------------------------------------------------
 # Classes
@@ -168,7 +142,7 @@ class SpaceoddityBase:
         "SpaceOddity\n"
         f"{S_PP_SHORT_DESC}\n"
         f"{S_PP_VERSION}\n"
-        "https://github.com/cyclopticnerve/SpaceOddity\n"
+        "https://github.com/cyclopticnerve/SpaceOddity"
     )
 
     # default format af log files
@@ -264,14 +238,6 @@ class SpaceoddityBase:
         # ----------------------------------------------------------------------
         # use cmd line
 
-        # # add config option
-        # self._parser.add_argument(
-        #     self.S_ARG_CFG_OPTION,
-        #     dest=self.S_ARG_CFG_DEST,
-        #     help=self.S_ARG_CFG_HELP,
-        #     metavar=self.S_ARG_CFG_METAVAR
-        # )
-
         # add debug option
         self._parser.add_argument(
             self.S_ARG_DBG_OPTION,
@@ -310,6 +276,7 @@ class SpaceoddityBase:
 
             # print default about text
             print(self.S_ABOUT)
+            print()
 
             # print usage and arg info and exit
             self._parser.print_help()
@@ -468,7 +435,6 @@ class SpaceoddityBase:
             except OSError as e:  # from save_dict
                 F.printd(self.S_ERR_ERR, str(e))
 
-
     # --------------------------------------------------------------------------
     # Handle the --uninstall cmd line op
     # --------------------------------------------------------------------------
@@ -489,7 +455,7 @@ class SpaceoddityBase:
             print(self.S_MSG_ABORT)
             sys.exit(0)
 
-# ------------------------------------------------------------------------------
+        # ----------------------------------------------------------------------
 
         # if path exists
         path_uninst = P_UNINST
@@ -501,7 +467,7 @@ class SpaceoddityBase:
         if self._cmd_debug:
             cmd += " -d"
 
-# ------------------------------------------------------------------------------
+        # ----------------------------------------------------------------------
 
         try:
             cp = F.run(cmd, shell=True)

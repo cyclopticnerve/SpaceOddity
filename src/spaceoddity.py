@@ -49,7 +49,6 @@ import sys
 from urllib import request
 
 # third party imports
-# from crontab import CronTab
 import cnlib.cnfunctions as F
 from crontab import CronTab
 import spaceoddity_base as B
@@ -76,24 +75,6 @@ class Spaceoddity(SpaceoddityBase):
     required for the program.
     """
 
-    # # --------------------------------------------------------------------------
-    # # Initialize the new object
-    # # --------------------------------------------------------------------------
-    # def __init__(self):
-    #     """
-    #     Initialize the new object
-
-    #     Initializes a new instance of the class, setting the default values
-    #     of its properties, and any other code that needs to run to create a
-    #     new object.
-    #     """
-
-    #     # do super init
-    #     super().__init__()
-
-    #     # NB: add class properties here
-    #     self._foo = True
-
     # --------------------------------------------------------------------------
     # Class constants
     # --------------------------------------------------------------------------
@@ -102,8 +83,6 @@ class Spaceoddity(SpaceoddityBase):
     S_PRG_NAME = "SpaceOddity"
 
     # dict keys
-    # S_KEY_GENERAL = "general"
-    # S_KEY_GEN_ENABLED = "enabled"
     S_KEY_APOD = "apod"
     S_KEY_APOD_DATE = "date"
     S_KEY_APOD_EXP = "explanation"
@@ -116,7 +95,8 @@ class Spaceoddity(SpaceoddityBase):
 
     # the url to load json from
     S_APOD_URL = (
-        "https://api.nasa.gov/planetary/apod?api_key=K0sNPQo8Dn9f8kaO35hzs8kUnU9bHwhTtazybTbr"
+        "https://api.nasa.gov/planetary/apod?"
+        "api_key=K0sNPQo8Dn9f8kaO35hzs8kUnU9bHwhTtazybTbr"
     )
 
     # acceptable types
@@ -145,6 +125,7 @@ class Spaceoddity(SpaceoddityBase):
 
     # messages
 
+    # TODO: make all msg in color and have start/done/fail
     # I18N: install cron job
     S_MSG_CRON_ADD = _("Adding cron job... ")
     # I18N: Uninstall cron job
@@ -193,6 +174,7 @@ class Spaceoddity(SpaceoddityBase):
         "env "
         "DISPLAY=:0 "
         "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/{}/bus "
+        # TODO: need this?
         # "/usr/bin/python3 "
         "{}"
     )
@@ -359,7 +341,7 @@ class Spaceoddity(SpaceoddityBase):
         my_cron.write()
 
         # show some text
-        print(self.S_MSG_DONE, end="", flush=True)
+        print(self.S_MSG_DONE)
 
     # --------------------------------------------------------------------------
     # Disable cron job
@@ -389,7 +371,7 @@ class Spaceoddity(SpaceoddityBase):
         my_cron.write()
 
         # show some text
-        print(self.S_MSG_DONE, end="", flush=True)
+        print(self.S_MSG_DONE)
 
     # --------------------------------------------------------------------------
     # Get json from api.nasa.gov
