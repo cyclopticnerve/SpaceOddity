@@ -1,0 +1,3 @@
+CNLib @ git+https://github.com/cyclopticnerve/CNLib@3329a7be0e39fa116d7f091ce0cf17e9eda121a6
+pillow==12.1.0
+python-crontab==3.3.0

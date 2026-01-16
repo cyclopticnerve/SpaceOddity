@@ -68,6 +68,7 @@
    │     ├─ [] spaceoddity_base.py
    │     └─ [] spaceoddity.py
    ├─ [] tests/
+   │     ├─ [] cw.png
    │     └─ [] test.py
    ├─ [] todo/
    │     └─ [] todo.txt

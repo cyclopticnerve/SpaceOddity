@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: cyclopticnerve@gmail.com\n"
-"POT-Creation-Date: 2026-01-09 13:21-0500\n"
+"POT-Creation-Date: 2026-01-14 10:48-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,7 @@ msgstr ""
 #: install/install.py:233
 #: install/install_base.py:168
 #: install/post_install.py:76
-#: src/spaceoddity.py:153
+#: src/spaceoddity.py:134
 msgid "Done"
 msgstr ""
 
@@ -68,7 +68,7 @@ msgstr ""
 #. I18N: help option help
 #: install/install.py:197
 #: install/install_base.py:143
-#: src/spaceoddity_base.py:207
+#: src/spaceoddity_base.py:130
 msgid "show this help message and exit"
 msgstr ""
 
@@ -107,7 +107,7 @@ msgstr ""
 #. I18N: answer yes
 #: install/install.py:252
 #: install/install_base.py:181
-#: src/spaceoddity_base.py:259
+#: src/spaceoddity_base.py:156
 msgid "y"
 msgstr ""
 
@@ -131,8 +131,7 @@ msgstr ""
 #. I18N: an error occurred
 #: install/install.py:275
 #: install/install_base.py:189
-#: src/spaceoddity_base.py:250
-#: src/spaceoddity_base.py:276
+#: src/spaceoddity_base.py:173
 msgid "Error:"
 msgstr ""
 
@@ -180,7 +179,7 @@ msgstr ""
 
 #. I18N: process aborted
 #: install/install_base.py:172
-#: src/spaceoddity_base.py:270
+#: src/spaceoddity_base.py:167
 msgid "Aborted"
 msgstr ""
 
@@ -193,134 +192,118 @@ msgstr ""
 
 #. I18N: answer no
 #: install/install_base.py:183
-#: src/spaceoddity_base.py:261
+#: src/spaceoddity_base.py:158
 msgid "N"
 msgstr ""
 
 #. I18N: enable mode help
-#: src/spaceoddity.py:138
+#: src/spaceoddity.py:118
 msgid "enable the program"
 msgstr ""
 
 #. I18N: disable mode help
-#: src/spaceoddity.py:144
+#: src/spaceoddity.py:124
 msgid "disable the program"
 msgstr ""
 
 #. I18N: install cron job
-#: src/spaceoddity.py:149
+#: src/spaceoddity.py:130
 msgid "Adding cron job... "
 msgstr ""
 
 #. I18N: Uninstall cron job
-#: src/spaceoddity.py:151
+#: src/spaceoddity.py:132
 msgid "Removing cron job... "
 msgstr ""
 
 #. I18N: get initial apod dict
 #. NB: param is dict
-#: src/spaceoddity.py:156
+#: src/spaceoddity.py:137
 msgid "Get data from server"
 msgstr ""
 
 #. I18N: no change, exit
-#: src/spaceoddity.py:158
+#: src/spaceoddity.py:139
 msgid "The APOD picture has not changed"
 msgstr ""
 
 #. I18N: new download is not image
-#: src/spaceoddity.py:160
+#: src/spaceoddity.py:141
 msgid "The new APOD is not an image"
 msgstr ""
 
 #. I18N: download succeeded
-#: src/spaceoddity.py:162
+#: src/spaceoddity.py:143
 msgid "Downloaded image"
 msgstr ""
 
 #. I18N: set image as background
-#: src/spaceoddity.py:164
+#: src/spaceoddity.py:145
 msgid "Set image as background"
 msgstr ""
 
 #. I18N: delete old image
-#: src/spaceoddity.py:166
+#: src/spaceoddity.py:147
 msgid "Deleted old image"
 msgstr ""
 
 #. I18N: error on initial get
 #. NB: param is error msg
-#: src/spaceoddity.py:171
+#: src/spaceoddity.py:152
 msgid "Could not get data from server: {}"
 msgstr ""
 
 #. I18N: could not download new image
 #. NB: param is error
-#: src/spaceoddity.py:174
+#: src/spaceoddity.py:155
 msgid "Could not download image: {}"
 msgstr ""
 
 #. I18N: could not set new image
 #. NB: param is error
-#: src/spaceoddity.py:177
+#: src/spaceoddity.py:158
 msgid "Could not set new image: {}"
 msgstr ""
 
 #. I18N: could not delete old image
 #. NB: param is error
-#: src/spaceoddity.py:180
+#: src/spaceoddity.py:161
 msgid "Could not delete old image: {}"
 msgstr ""
 
-#. I18N: context for this string
-#: src/spaceoddity.py:353
-msgid "this is func (DEBUG)"
-msgstr ""
-
-#. I18N: context for this string
-#: src/spaceoddity.py:357
-msgid "this is func"
-msgstr ""
-
 #. I18N: config file option help
-#: src/spaceoddity_base.py:191
+#: src/spaceoddity_base.py:114
 msgid "load configuration from file"
 msgstr ""
 
 #. I18N: config file dest
-#: src/spaceoddity_base.py:193
+#: src/spaceoddity_base.py:116
 msgid "FILE"
 msgstr ""
 
 #. I18N: debug mode help
-#: src/spaceoddity_base.py:200
+#: src/spaceoddity_base.py:123
 msgid "enable debugging mode"
 msgstr ""
 
-#. I18N: install option help
-#: src/spaceoddity_base.py:215
-msgid "install this program"
-msgstr ""
-
 #. I18N: uninstall option help
-#: src/spaceoddity_base.py:224
+#: src/spaceoddity_base.py:137
 msgid "uninstall this program"
 msgstr ""
 
-#. I18N: uninstall not found
-#: src/spaceoddity_base.py:253
-#: src/spaceoddity_base.py:278
-msgid "Uninstall files not found"
-msgstr ""
-
 #. I18N: ask to uninstall
-#: src/spaceoddity_base.py:264
+#: src/spaceoddity_base.py:161
 msgid ""
 "This will uninstall {}.\n"
 "Do you want to continue?"
 msgstr ""
 
+#. I18N: uninstall not found
+#: src/spaceoddity_base.py:175
+msgid "Uninstall files not found"
+msgstr ""
+
 #. I18N: could not find -c file
-#: src/spaceoddity_base.py:282
+#: src/spaceoddity_base.py:178
 msgid "Config file {} not found"
 msgstr ""

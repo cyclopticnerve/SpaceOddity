@@ -241,6 +241,8 @@ class Spaceoddity(SpaceoddityBase):
         if res:
             self._get_apod_image()
 
+        self._do_text()
+
         self._set_image()
 
         if res:
@@ -307,6 +309,10 @@ class Spaceoddity(SpaceoddityBase):
         # show some text
         print(self.S_MSG_CRON_ADD, end="", flush=True)
 
+        # */10 * * * * env DISPLAY=:0
+        # DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus /usr/bin/python3
+        # /home/dana/.local/spaceoddity/src/spaceoddity.py # spaceoddity
+
         # ----------------------------------------------------------------------
         # get cron command
 
@@ -362,7 +368,7 @@ class Spaceoddity(SpaceoddityBase):
         # get current user's crontab
         my_cron = CronTab(user=True)
 
-        # remove 'every' job
+        # remove our job
         for job in my_cron:
             if job.comment == self.S_PRG_NAME:
                 my_cron.remove(job)
@@ -470,6 +476,14 @@ class Spaceoddity(SpaceoddityBase):
             sys.exit(-1)
 
         print(self.S_MSG_DL)
+
+    # --------------------------------------------------------------------------
+    # Do text overlay
+    # --------------------------------------------------------------------------
+    def _do_text(self):
+        """
+        Description
+        """
 
     # --------------------------------------------------------------------------
     # Set the wallpaper
