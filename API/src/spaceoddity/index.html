@@ -646,7 +646,7 @@ required for the program.</p>
         path_old = Path(file_old)
 
         # if it exists, delete it
-        if path_old.exists():
+        if path_old.exists() &amp; path_old.is_file():
             try:
                 path_old.unlink()
 
