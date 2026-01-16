@@ -68,8 +68,9 @@
    │     ├─ [] spaceoddity_base.py
    │     └─ [] spaceoddity.py
    ├─ [] tests/
-   │     ├─ [] cw.png
-   │     └─ [] test.py
+   │     ├─ [] new_wp.png
+   │     ├─ [] test.py
+   │     └─ [] wp.jpg
    ├─ [] todo/
    │     └─ [] todo.txt
    ├─ [] .gitignore
@@ -77,5 +78,6 @@
    ├─ [] README.md
    ├─ [] develop.py
    ├─ [] mkdocs.yml
+   ├─ [] new_wp.jpg
    ├─ [] pyproject.toml
    └─ [] requirements.txt
