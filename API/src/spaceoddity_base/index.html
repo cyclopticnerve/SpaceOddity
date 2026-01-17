@@ -346,14 +346,6 @@ required for the program.</p>
         # ----------------------------------------------------------------------
         # use cmd line
 
-        # add debug option
-        self._parser.add_argument(
-            self.S_ARG_DBG_OPTION,
-            action=self.S_ARG_DBG_ACTION,
-            dest=self.S_ARG_DBG_DEST,
-            help=self.S_ARG_DBG_HELP,
-        )
-
         # always add help option
         self._parser.add_argument(
             self.S_ARG_HLP_OPTION,
@@ -368,6 +360,14 @@ required for the program.</p>
             action=self.S_ARG_UNINST_ACTION,
             dest=self.S_ARG_UNINST_DEST,
             help=self.S_ARG_UNINST_HELP,
+        )
+
+        # add debug option
+        self._parser.add_argument(
+            self.S_ARG_DBG_OPTION,
+            action=self.S_ARG_DBG_ACTION,
+            dest=self.S_ARG_DBG_DEST,
+            help=self.S_ARG_DBG_HELP,
         )
 
         # run the parser
@@ -554,12 +554,12 @@ required for the program.</p>
         # ask to uninstall
         str_ask = F.dialog(
             self.S_ASK_UNINST.format("SpaceOddity"),
-            [self.S_ASK_YES, self.S_ASK_NO],
-            self.S_ASK_NO,
+            [F.S_ASK_YES, F.S_ASK_NO],
+            F.S_ASK_NO,
         )
 
         # user hit enter or typed "n/N"
-        if str_ask != self.S_ASK_YES:
+        if str_ask != F.S_ASK_YES:
             print(self.S_MSG_ABORT)
             sys.exit(0)
 
@@ -578,9 +578,7 @@ required for the program.</p>
         # ----------------------------------------------------------------------
 
         try:
-            cp = F.run(cmd, shell=True)
-            print(cp.stdout)
-            print(cp.stderr)
+            F.run(cmd, shell=True)
             sys.exit(0)
         except F.CNRunError as e:
             print(e.output)

@@ -196,7 +196,7 @@ required for the program.</p>
     # --------------------------------------------------------------------------
 
     # NB: used in _enable
-    S_PRG_NAME = "SpaceOddity"
+    S_PRG_NAME = "spaceoddity"
 
     # dict keys
     S_KEY_APOD = "apod"
@@ -229,13 +229,13 @@ required for the program.</p>
     S_ARG_ENABLE_OPTION = "--enable"
     S_ARG_ENABLE_ACTION = "store_true"
     S_ARG_ENABLE_DEST = "ENABLE_DEST"
-    S_ARG_DISABLE_DEST = "DISABLE_DEST"
     # I18N: enable mode help
     S_ARG_ENABLE_HELP = _("enable the program")
 
     # disable option strings
     S_ARG_DISABLE_OPTION = "--disable"
     S_ARG_DISABLE_ACTION = "store_true"
+    S_ARG_DISABLE_DEST = "DISABLE_DEST"
     # I18N: disable mode help
     S_ARG_DISABLE_HELP = _("disable the program")
 
@@ -291,7 +291,7 @@ required for the program.</p>
         "DISPLAY=:0 "
         "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/{}/bus "
         # TODO: need this?
-        # "/usr/bin/python3 "
+        "/usr/bin/python3 "
         "{}"
     )
 
@@ -334,6 +334,8 @@ required for the program.</p>
         program, and performing its steps.
         """
 
+        self._logger.info("----------------------------------------")
+
         # call boilerplate code
         self._setup()
 
@@ -369,6 +371,8 @@ required for the program.</p>
 
         # call boilerplate code
         self._teardown()
+
+        self._logger.info("----------------------------------------")
 
     # --------------------------------------------------------------------------
     # Private methods
@@ -417,6 +421,8 @@ required for the program.</p>
         Enable cron job
         """
 
+        self._logger.info("_enable")
+
         # debug foo
         if self._cmd_debug:
             print("_enable")
@@ -456,8 +462,8 @@ required for the program.</p>
             my_job = my_cron.new(command=cron_cmd, comment=self.S_PRG_NAME)
 
         # set job time
+        my_job.minute.every(1)  # type: ignore
         my_job.enable()
-        my_job.minute.every(10) # type: ignore
 
         # save job parameters
         my_cron.write()
@@ -472,6 +478,8 @@ required for the program.</p>
         """
         Disable cron job
         """
+
+        self._logger.info("_disable")
 
         # debug foo
         if self._cmd_debug:
@@ -503,6 +511,8 @@ required for the program.</p>
         Description
         """
 
+        self._logger.info("_get_apod_dict")
+
         # debug_foo
         if self._cmd_debug:
             print("_get_apod_dict")
@@ -529,16 +539,16 @@ required for the program.</p>
         apod_dict_old = self._dict_cfg[self.S_KEY_APOD]
         apod_dict_new = json.loads(response_text)
 
-        # check if url is the same
-        if self._check_same_url(apod_dict_old, apod_dict_new):
-            print(self.S_MSG_SAME_URL)
-            return False
-
         # check if today's apod is an image (sometimes it's a video)
         media_type = apod_dict_new[self.S_KEY_APOD_TYPE]
         if media_type not in self.S_MEDIA_TYPES:
             print(self.S_MSG_NOT_IMG)
             return False
+
+        # check if url is the same
+        if self._check_same_url(apod_dict_old, apod_dict_new):
+            print(self.S_MSG_SAME_URL)
+            return True
 
         # apply new dict to config
         self._dict_cfg[self.S_KEY_APOD] = apod_dict_new
@@ -552,6 +562,8 @@ required for the program.</p>
         """
         Description
         """
+
+        self._logger.info("_get_apod_image")
 
         # debug_foo
         if self._cmd_debug:
@@ -609,6 +621,8 @@ required for the program.</p>
         Description
         """
 
+        self._logger.info("_set_image")
+
         # debug_foo
         if self._cmd_debug:
             print("_set_image")
@@ -636,6 +650,8 @@ required for the program.</p>
         Description
         """
 
+        self._logger.info("_delete_old_image")
+
         # debug_foo
         if self._cmd_debug:
             print("_delete_old_image")
@@ -646,7 +662,7 @@ required for the program.</p>
         path_old = Path(file_old)
 
         # if it exists, delete it
-        if path_old.exists() &amp; path_old.is_file():
+        if path_old.is_file() &amp; path_old.exists():
             try:
                 path_old.unlink()
 
@@ -666,6 +682,8 @@ required for the program.</p>
         """
         Description
         """
+
+        self._logger.info("_check_same_url")
 
         # default return result
         same_url = False
@@ -773,6 +791,8 @@ program, and performing its steps.</p>
     program, and performing its steps.
     """
 
+    self._logger.info("----------------------------------------")
+
     # call boilerplate code
     self._setup()
 
@@ -807,7 +827,9 @@ program, and performing its steps.</p>
     # teardown
 
     # call boilerplate code
-    self._teardown()</code></pre>
+    self._teardown()
+
+    self._logger.info("----------------------------------------")</code></pre>
             </details>
     </div>
 
